@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res/com.visualdenim.schooltraq"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_slide_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_feed_lv"
+                android:layout_width="fill_parent"
+                android:layout_height="330dp"
+                android:background="@null"
+                android:orientation="vertical"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:id="@+id/view_current_level_do"
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_weight="2"
+                        android:background="#ffffff" />
+
+                    <View
+                        android:id="@+id/view_current_level_rest"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="8"
+                        android:background="#94ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_lvcount_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="888"
+                        android:textColor="#ffffff"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lvcount_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/888"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_lv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="Lv.4"
+                        android:textColor="#ffffff"
+                        android:textSize="21sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_level_graph"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv1_n" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv2" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv3" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView4"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_4"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv4" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv5" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp" >
+
+                                <org.andlib.ui.PercentView
+                                    android:id="@+id/percentView6"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_level_6"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:padding="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/feed_level_lv6" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=""
+                                    android:textColor="#6fd765"
+                                    android:textSize="20dip"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_level_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정답률"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="110dp"
+                            android:layout_height="120dp" >
+
+                            <ImageView
+                                android:id="@+id/iv_edit_info"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/my_btn_photo_bg"
+                                android:padding="5dp" />
+
+                            <ImageView
+                                android:id="@+id/iv_picture"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="10dp"
+                                android:padding="10dp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical|right"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv_feed_today"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:gravity="right"
+                                    android:text="2014. 3. 20"
+                                    android:textColor="#b2ffffff"
+                                    android:textSize="30sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="#44ffffff" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tv_feedback_username"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:gravity="right"
+                                    android:shadowColor="@color/text_shadow"
+                                    android:shadowDx="5"
+                                    android:shadowDy="1"
+                                    android:shadowRadius="20"
+                                    android:text="오늘 김영철님이 학습한 단어는"
+                                    android:textColor="#b2ffffff"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_info_total_study"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:layout_marginBottom="3dp"
+                                    android:gravity="bottom"
+                                    android:text="학습한 단어는 999개입니다"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="4dp" >
+
+                            <ImageView
+                                android:id="@+id/iv_feedback_invite"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/my_btn_friend" />
+
+                            <ImageView
+                                android:id="@+id/iv_feedback_choice"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/my_btn_setting" />
+
+                            <ImageView
+                                android:id="@+id/iv_feedback_faq"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/my_btn_board" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:id="@+id/ll_feedback_reivew_area"
+                                android:layout_width="82dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|right"
+                                    android:text="복습한단어"
+                                    android:textColor="#b2ffffff"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#77ffffff" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_feedback_current_review"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:gravity="right"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/tv_feedback_today_rewind"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_gravity="right"
+                                        android:gravity="bottom"
+                                        android:text="135"
+                                        android:textColor="#ffffff"
+                                        android:textSize="24sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_feedback_today_total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_marginBottom="3dp"
+                                        android:gravity="bottom"
+                                        android:text="/250"
+                                        android:textColor="#ffffff"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_feedback_new_area"
+                                android:layout_width="82dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="19dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|right"
+                                    android:text="새학습단어"
+                                    android:textColor="#b2ffffff"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#77ffffff" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|right"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/tv_feedback_current_newstudy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:text="135"
+                                        android:textColor="#ffffff"
+                                        android:textSize="24sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/tv_total_study_feed_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/my_graph_topbg"
+                    android:gravity="center"
+                    android:text="현재 학습 현황"
+                    android:textColor="#88ffffff"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@null" />
+
+                <LinearLayout
+                    android:id="@+id/ll_testfeed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_graph_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="19dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <org.andlib.ui.StudyPercentView
+                            android:id="@+id/pv_totalgraph"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerInParent="true" />
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="0dp"
+                            android:background="@drawable/my_graph_center"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_graph_main_cate"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="전체"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/tv_graph_main_count"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="25555"
+                                android:textColor="#ffffff"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        
+                        <ImageButton
+                            android:id="@+id/bt_graph_show_explain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="19dp"
+                            android:background="@drawable/my_graph_btn_desc"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="19dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_feedback_tleft_total"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/feed_graph_activate"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_feedback_tleft_total_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="19dp"
+                                android:gravity="center_vertical"
+                                android:text="암기한 단어"
+                                android:textColor="#237746"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_feedback_tleft_total_count"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="19dp"
+                                android:gravity="center_vertical"
+                                android:text="1250"
+                                android:textColor="#237746"
+                                android:textSize="27sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_feedback_tright_total"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/feed_graph_deactive"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_feedback_tright_total_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="19dp"
+                                android:gravity="center_vertical|right"
+                                android:text="남은 단어"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_feedback_tright_total_count"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="19dp"
+                                android:gravity="center_vertical|right"
+                                android:text="1250"
+                                android:textColor="#ffffff"
+                                android:textSize="27sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="19dp"
+                        android:background="@drawable/feed_graph_contents"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="19dp"
+                            android:paddingTop="19dp" >
+
+                            <LinearLayout
+                                android:layout_width="25dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="19dp"
+                                android:orientation="vertical" >
+
+                                <View
+                                    android:id="@+id/view_percent_left"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="30"
+                                    android:background="#318060" />
+
+                                <View
+                                    android:id="@+id/view_percent_right"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="70"
+                                    android:background="#009949" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="270dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical" >
+
+                                    <View
+                                        android:id="@+id/view_feedback_bleft"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginLeft="21dp"
+                                        android:layout_marginRight="19dp"
+                                        android:background="#237746" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal" >
+
+                                        <View
+                                            android:id="@+id/view_title_top"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="21dp"
+                                            android:layout_marginTop="10dp"
+                                            android:background="#237746" />
+
+                                        <TextView
+                                            android:id="@+id/tv_feedback_bleft_title"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="11dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_weight="1"
+                                            android:text="불안한 단어"
+                                            android:textColor="#318060"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_feedback_bleft_count"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="right"
+                                            android:layout_marginRight="19dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1.5"
+                                            android:gravity="right"
+                                            android:text="226"
+                                            android:textColor="#318060"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_feedback_bleft_contents_unknown"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_marginLeft="19dp"
+                                        android:layout_marginRight="19dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="#64ffffff"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="5dp"
+                                        android:text="aslkfdslakjfkl"
+                                        android:textColor="#88000000"
+                                        android:textSize="11sp"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_graph_second"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginLeft="19dp"
+                                        android:layout_marginRight="19dp"
+                                        android:background="#64ffffff"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible" >
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical" >
+
+                                            <TextView
+                                                android:id="@+id/tv_feedback_bleft_contents"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_weight="1"
+                                                android:text="aslkfdslakjfkl"
+                                                android:textColor="#88000000"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_feedback_bleft_contents1"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_weight="1"
+                                                android:gravity="right"
+                                                android:text="aslkfdslak"
+                                                android:textColor="#88000000"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:background="@drawable/feed_graph_dotline" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical" >
+
+                                            <TextView
+                                                android:id="@+id/tv_feedback_bleft_contents2"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_weight="1"
+                                                android:text="aslkfdsla"
+                                                android:textColor="#88000000"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_feedback_bleft_contents3"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_weight="1"
+                                                android:gravity="right"
+                                                android:text="aslkfdslak"
+                                                android:textColor="#88000000"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical" >
+
+                                    <View
+                                        android:id="@+id/view_feedback_bright"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginLeft="19dp"
+                                        android:layout_marginRight="19dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="#009949" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal" >
+
+                                        <View
+                                            android:id="@+id/view_title_bottom"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="21dp"
+                                            android:layout_marginTop="10dp"
+                                            android:background="#009949" />
+
+                                        <TextView
+                                            android:id="@+id/tv_feedback_bright_title"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="11dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_weight="1"
+                                            android:text="안심 단어"
+                                            android:textColor="#009949"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_feedback_bright_count"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="right"
+                                            android:layout_marginRight="19dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1.5"
+                                            android:gravity="right"
+                                            android:text="226"
+                                            android:textColor="#009949"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_feedback_bright_contents"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="19dp"
+                                        android:layout_marginRight="19dp"
+                                        android:background="#64ffffff"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="5dp"
+                                        android:text="aslkfdsl"
+                                        android:textColor="#88000000"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_show_remeber_word"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="19dp"
+                            android:background="#ffffff" />
+
+                        <Button
+                            android:id="@+id/bt_show_remeber_word"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="암기한 단어 모두 보기"
+                            android:textColor="#ffffff"
+                            android:textSize="19sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

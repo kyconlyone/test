@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="kakao_app_key">9e95600f98e7d45cb8533d2c9a167138</string>
+    <string name="newTag">New!</string>
+    <string name="network_error">네트워크가 연결되어 있지 않습니다. 네트워크 상태를 확인 해 주세요.</string>
+    <string name="popup_text_button_tag">a</string>
+    <string name="popup_text_button_value_tag">b</string>
+
+    <!-- 슬라이드 메뉴 텍스트 내용들 -->
+
+    <string name="slidemenu_home">홈</string>
+    <string name="slidemenu_alarm">알람 설정</string>
+    <string name="slidemenu_statistics">내 통계보기</string>
+    <string name="slidemenu_myinfo">내 정보 보기</string>
+    <string name="slidemenu_invite">친구 초대하기</string>
+    <string name="slidemenu_comunite">게시판</string>
+
+    <!-- TTS -->
+    <string name="msg_not_support_lang">This language does not support.</string>
+
+    <!-- 통계 부분 텍스트 내용들 -->
+
+    <string name="statistics_total_days">접속 일수</string>
+    <string name="statistics_total_count">총 단어수</string>
+    <string name="statistics_lock_count">지난 일주일동안 연횟수</string>
+    <string name="statistics_popup_count">지난 일주일동안 받은 횟수</string>
+    <string name="statistics_note_known_word">아는 단어수</string>
+    <string name="statistics_note_unknown_word">모르는 단어수</string>
+    <string name="silent_alarm_summary">Silent</string>
+    <string name="default_label">Alarm</string>
+    <string name="app_name">밀당영단어</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- 로그인/가입 -->
+    <string name="content_description_baasio_logo">baas.io</string>
+    <string name="error_invalid_email">이메일 주소를 확인해주세요.</string>
+    <string name="error_length_email">이메일 주소는 8~40자 입니다.</string>
+    <string name="error_invalid_name">이름을 확인해주세요.</string>
+    <string name="error_invalid_password">비밀번호는 6~15자 입니다.</string>
+    <string name="error_invalid_grant">이메일 주소 또는 비밀번호를 확인해주세요.</string>
+    <string name="error_already_exist">이미 가입된 사용자입니다.</string>
+    <string name="error_signin_facebook">Facebook 로그인에 실패하였습니다.</string>
+    <string name="error_signup_facebook">Facebook 가입에 실패하였습니다.</string>
+    <string name="msg_signup_fail">가입에 실패하였습니다. \n잠시후에 다시 시도해 주세요.</string>
+    <string name="msg_signin_success">로그인 되었습니다.</string>
+    <string name="msg_signup_success">가입에 성공하셨습니다.</string>
+    <string name="msg_finish_back_bt">뒤로버튼을 한번 더 누르시면 종료됩니다.</string>
+    <string name="hint_email">이메일 주소</string>
+    <string name="sign_up_email">이메일로 가입하기</string>
+    <string name="hint_confirm_password">현재 비밀번호</string>
+    <string name="hint_edit_password">변경할 비밀번호</string>
+    <string name="hint_password">비밀번호</string>
+    <string name="hint_firstname">이름</string>
+    <string name="hint_gender">성별</string>
+    <string name="hint_school">학교</string>
+    <string name="hint_birth">생년월일(870101)</string>
+    <string name="label_need_signup">회원가입</string>
+    <string name="label_update">업데이트</string>
+    <string name="label_notice">공지사항</string>
+    <string name="label_use">이용약관</string>
+    <string name="label_already_signuped"> 로 그 인 </string>
+    <string name="label_confirm">로그인</string>
+    <string name="label_logout_confirm">로그아웃</string>
+    <string name="label_eidt_password">비밀번호 변경</string>
+    <string name="label_tems_for_use">이용약관</string>
+    <string name="label_tems_for_personal_info">개인정보 취급약관</string>
+    <string name="label_send_qna">문의하기</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+
+    <string-array name="title_array">
+        <item>AAAA</item>
+        <item>BBBB</item>
+        <item>CCCC</item>
+        <item>DDDD</item>
+        <item>EEEE</item>
+        <item>FFFF</item>
+    </string-array>
+
+    <string name="title_prompt">문의 유형 선택</string>
+
+    <!-- feedback 텍스트 내용 -->
+    <string name="day_avreage">일일 평균\n사용시간</string>
+    <string name="day_goal">(오늘의)\n목표 달성률</string>
+    <string name="all_memorize_word">총 암기 단어</string>
+    <string name="forgetting_curve_analyze">망각곡선 분석</string>
+    <string name="review_word">복습할 단어</string>
+    <string name="forgetting_">망각곡선 측정률</string>
+    <string name="notice_forgetting_curve">망각 곡선 완성도가 높을수록\n정확한 복습단어가 추출됩니다.</string>
+    <string name="wordbook_1">1등급 단어장</string>
+    <string name="wordbook_23">2-3등급 단어장</string>
+    <string name="wordbook_45">4-5등급 단어장</string>
+    <string name="wordbook_67">6-7등급 단어장</string>
+    <string name="wordbook_89">8-9등급 단어장</string>
+    <string name="memorize">을 암기중입니다.</string>
+    <string name="memorize_word_count">외운 단어 수</string>
+    <string name="title_activity_myinfo">MyinfoActivity</string>
+
+</resources>

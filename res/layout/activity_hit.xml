@@ -1,0 +1,504 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#cccccc"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000fff" >
+
+            <TextView
+                android:id="@+id/hitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/backBtn"
+                android:text="적중"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/backBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#000fff" >
+
+            <TextView
+                android:id="@+id/hot_noticeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="top|right"
+                android:text="망각곡선이 잘 그려지고 있습니다.\n이 속도대로 꾸준히 공부하세요\n망각곡선이 잘 그려지고 있습니다.\n이 속도대로 꾸준히 공부하세요\n"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="500dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/my_gradeTv"
+                    android:layout_width="170dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="4-5등급"
+                    android:textColor="#000000"
+                    android:textSize="20pt" />
+
+                <TextView
+                    android:id="@+id/test_cover_percentage_countTv"
+                    android:layout_width="160dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|right"
+                    android:text="43/1032"
+                    android:textColor="#000000"
+                    android:textSize="15pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/test_cover_percentageTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:gravity="right"
+                    android:text="수능 커버율 00%"
+                    android:textColor="#000000"
+                    android:textSize="6pt" />
+
+                <ProgressBar
+                    android:id="@+id/test_cover_percentagePb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="350dp"
+                android:background="#000000"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/grade_1Img"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/grade_1Tv"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="1"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/grade_1_expect_wordTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="등급예상단어"
+                        android:textSize="7pt" />
+
+                    <Button
+                        android:id="@+id/grade_1_expect_wordBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/grade_1_expect_word_percentageTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="0/543"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/grade_1_expect_word_percentagePb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/grade_2Img"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/grade_2Tv"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="2-3"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/grade_2_expect_wordTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="등급예상단어"
+                        android:textSize="7pt" />
+
+                    <Button
+                        android:id="@+id/grade_2_expect_wordBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/grade_2_expect_word_percentageTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="0/543"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/grade_2_expect_word_percentagePb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/grade_3Img"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/grade_3Tv"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="4-5"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/grade_3_expect_wordTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="등급예상단어"
+                        android:textSize="7pt" />
+
+                    <Button
+                        android:id="@+id/grade_3_expect_wordBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/grade_3_expect_word_percentageTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="0/543"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/grade_3_expect_word_percentagePb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/grade_4Img"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/grade_4Tv"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="6-7"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/grade_4_expect_wordTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="등급예상단어"
+                        android:textSize="7pt" />
+
+                    <Button
+                        android:id="@+id/grade_4_expect_wordBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/grade_4_expect_word_percentageTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="0/543"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/grade_4_expect_word_percentagePb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/grade_5Img"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/grade_5Tv"
+                        android:layout_width="40dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="8-9"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/grade_5_expect_wordTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:text="등급예상단어"
+                        android:textSize="7pt" />
+
+                    <Button
+                        android:id="@+id/grade_5_expect_wordBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/grade_5_expect_word_percentageTv"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="0/543"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/grade_5_expect_word_percentagePb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <com.viewpagerindicator.TabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+       
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000" >
+
+            <TextView
+                android:id="@+id/hit_pushTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="20dp"
+                android:text="적중관련 푸쉬"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/workbook_listTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/hit_pushTv"
+                android:layout_below="@+id/hit_pushTv"
+                android:layout_marginTop="10dp"
+                android:text="출제 문제집 리스트"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+
+            <ToggleButton
+                android:id="@+id/hit_pushBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/workbook_listTv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="34dp"
+                android:text="ToggleButton" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

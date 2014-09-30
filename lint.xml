@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="CutPasteId" severity="ignore" />
+    <issue id="DrawAllocation" severity="ignore" />
+    <issue id="InlinedApi" severity="ignore" />
+    <issue id="JavascriptInterface" severity="ignore" />
+    <issue id="NewApi" severity="ignore" />
+    <issue id="UseSparseArrays" severity="ignore" />
+    <issue id="ValidFragment" severity="ignore" />
+</lint>

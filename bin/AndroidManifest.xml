@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ihateflyingbugs.vocaslide"
+    android:versionCode="41"
+    android:versionName="2.2.33" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <!-- GCM connects to Internet Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.ihateflyingbugs.vocaslide.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ihateflyingbugs.vocaslide.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <application
+        android:name=".VOCAconfig"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        <activity
+            android:name=".SideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="adjustPan|adjustResize" >
+        </activity>
+
+        <!-- <activity android:name=".IntroActivity" android:screenOrientation="portrait"/> -->
+        <activity
+            android:name=".login.TutorialGestureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TutorialPopupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.TutorialActivity"
+            android:parentActivityName=".TutorialActivity"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".LockActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 튜토리얼 추가 부분 -->
+
+        <activity
+            android:name=".indicator.SampleCirclesSnap"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="path"
+                    android:scheme="myapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tutorial.ChoiceTypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.ReviewTutoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tutorial.Tutorial_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.Tutorial_Test_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.FeedbackPopup"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".login.WriteUserInfoActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.Feedbackpay"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".Known_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name=".tutorial.Tutorial_Graph_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name=".tutorial.Tutorial_Graph_Activity_test"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".tutorial.ExpainFeedPopup"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!--
+             <activity android:name="LockActivity"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:screenOrientation="nosensor"
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
+        -->
+
+        <activity
+            android:name=".ModePopupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".popup.SetGoalTimePopup"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name=".lock.LockService"
+            android:process=":background" >
+        </service>
+        <service
+            android:name=".service.DBService"
+            android:process=":background" >
+        </service>
+
+        <receiver
+            android:name=".lock.VocaReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Alarm -->
+        <service
+            android:name=".alarm.AlarmService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:process="com.ihateflyingbugs.vocaslide.alarm.serviceProcess" >
+        </service>
+
+        <receiver android:name=".alarm.AlarmServiceBroadcastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AlarmAlertActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name=".alarm.AlarmAlertBroadcastReciever" >
+        </receiver>
+        <receiver android:name=".alarm.PhoneStateChangedBroadcastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <!-- Alarm -->
+
+        <activity
+            android:name=".login.IntroActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".login.MainActivitys"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".login.JoinActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".login.DocPopup"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".login.CultureCouponPopup"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".login.WriteInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.kakao.LoginActivity" />
+        <activity
+            android:name=".feedback.WillActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" />
+        </activity>
+        <activity
+            android:name=".feedback.HitActivity"
+            android:label="Tabs/Styled"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" />
+        </activity>
+        <activity
+            android:name=".feedback.WillCoachActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.ihateflyingbugs.vocaslide.QnAActivity"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.ihateflyingbugs.vocaslide.QnAListActivity"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name=".feedback.FAQActivity"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.ihateflyingbugs.vocaslide.feedback.ExplainActivity"
+            android:label="Tabs/Styled"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".feedback.MemoryActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ChangeNameActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.feedback.SettingActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.feedback.SettingActivity" />
+        </activity>
+        <activity
+            android:name=".feedback.SettingActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.tutorial.MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.tutorial.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NoticeActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.feedback.SettingActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.feedback.SettingActivity" />
+        </activity>
+        <activity
+            android:name=".UseActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ihateflyingbugs.vocaslide.feedback.SettingActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ihateflyingbugs.vocaslide.feedback.SettingActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.ihateflyingbugs.vocaslide" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <provider
+            android:name=".service.Provider"
+            android:authorities="com.ihateflyingbugs.vocaslide.service.Provider" >
+        </provider>
+
+        <activity
+            android:name=".MyinfoActivity"
+            android:label="@string/title_activity_myinfo" >
+        </activity>
+    </application>
+
+</manifest>

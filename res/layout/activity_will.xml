@@ -1,0 +1,349 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#cccccc"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#f00000"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/will_noticeTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:text="김민지님의 최근 1주일\n목표 달성률은 88%입니다."
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#f00000" />
+
+                <TextView
+                    android:id="@+id/will_noticeTv2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#cccccc"
+                    android:gravity="center"
+                    android:text="블라블라블라블라블라블라블라블라\n블라블라블라블라블라블라블라블라\n블라블라블라블라블라블라블라블라"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/more_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:text="더보기"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#f00000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#000000" >
+
+                <TextView
+                    android:id="@+id/week_average"
+                    android:layout_width="170dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="지난 7일 평균 학습시간"
+                    android:textColor="#ffffff"
+                    android:textSize="6pt" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/month_average"
+                    android:layout_width="170dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="지난 30일 평균 학습시간"
+                    android:textColor="#ffffff"
+                    android:textSize="6pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="114dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_my_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="22분"
+                        android:textColor="#000000"
+                        android:textSize="15pt" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="내시간"
+                        android:textColor="#000000"
+                        android:textSize="7pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="114dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_user_group_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="35분"
+                        android:textColor="#000000"
+                        android:textSize="15pt" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="0학년 0급\n단어장 사용자 평균"
+                        android:textColor="#000000"
+                        android:textSize="5pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="114dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_grade_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="19분"
+                        android:textColor="#000000"
+                        android:textSize="15pt" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="0학년\n전체 평균"
+                        android:textColor="#000000"
+                        android:textSize="5pt" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:text="기간별 학습 시간 평균 (단위 : 분)" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1500dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/calendar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/day1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/goal_timeTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:text="현재 목표시간"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/goal_time_min_Tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:text="매일매일 15분"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff0000"
+                android:textSize="20pt" />
+
+            <Button
+                android:id="@+id/bt_will_settime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="목표 수정" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/will_pushTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="의지관련 푸쉬"
+                    android:textColor="#ffffff"
+                    android:textSize="10pt" />
+
+                <Switch
+                    android:id="@+id/will_pushBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/block_kakaoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="카카오톡 차단"
+                    android:textColor="#ffffff"
+                    android:textSize="10pt" />
+
+                <Switch
+                    android:id="@+id/block_kakaoBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/accumulate_use_timeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="총 누적 사용시간"
+                    android:textColor="#ffffff"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/accumulate_use_time_countTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|right"
+                    android:text="4h 33min"
+                    android:textColor="#ffffff"
+                    android:textSize="8pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
